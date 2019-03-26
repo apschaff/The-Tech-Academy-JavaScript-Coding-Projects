@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p>How long do you want your timer for?</p>
+	<input id="seconds" type="" name=""> <br> 
+	<button onclick="countdown()">Click To Start Timer</button>
+	<p id="timer"></p>
+	<script type="text/javascript">
+		function countdown() {
+		var seconds = document.getElementById("seconds").value;
+		function tick() {
+			seconds = seconds - 1;
+			timer.innerHTML = seconds;
+				setTimeout(tick, 1000);
+					if(seconds == -1){
+						alert("Time's up!");
+					}
+			}
+			tick();
+		}
+	</script>
+
+
+
+</body>
+</html>
